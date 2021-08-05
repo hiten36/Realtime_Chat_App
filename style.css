@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main{
+    background-image: linear-gradient(rgb(0, 0, 114), rgb(255, 127, 234));
+    height: 100%;
+    text-align: center;
+}
+.logo{
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 100px;
+    filter: invert(1);
+    margin-right: 10px;
+}
+.logo h1{
+    color: white;
+    font-size: 35px;
+}
+.box{
+    background: url('bg.png') no-repeat center center/cover;
+    width: 60%;
+    height: 70%;
+    position: relative;
+    margin: auto;
+    border-radius: 10px;
+    z-index: 0;
+    overflow: auto;
+}
+.box::before{
+    content: "";
+    height: inherit;
+    width: inherit;
+    background: rgba(0, 0, 0, 0.250);
+    position: fixed;
+    border-radius: 10px;
+    top: 9rem;
+    left: 20%;
+    z-index: -1;
+}
+.left{
+    background-color: rgb(46, 46, 46);
+    float: left;
+}
+.right{
+    background-color: rgb(1, 80, 1);
+    float: right;
+}
+.box-inner{
+    margin: 4px 20px;
+    clear: both;
+    color: white;
+    font-size: 20px;
+    border-radius: 6px;
+    padding: 5px 10px;
+    max-width: 70%;
+    text-align: start;
+}
+.send{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+}
+input{
+    width: 73%;
+    padding: 8px 13px;
+    font-size: 19px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border: none;
+    outline: none;
+}
+button{
+    padding: 8px 20px;
+    background-color: rgb(0, 60, 255);
+    color: white;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 19px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(29, 82, 255);
+}
+button:active{
+    box-shadow: 2px 0px 3pt 2pt rgb(67, 228, 46)
+}
+.middle{
+    max-width: fit-content;
+    text-align: center;
+    margin:10px auto;
+    background-color: rgba(0, 0, 115, 0.6);
+}
+@media only screen and (max-width: 1230px) {
+    .send{
+        width: 65%;
+    }
+}
+@media only screen and (max-width: 890px) {
+    .send{
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 660px) {
+    .box-inner{
+        font-size: 18px;
+    }
+    input{
+        width: 81%;
+    }
+    .send{
+        width: 92%;
+    }
+    .box{
+        width: 95%;
+        height: 75%;
+    }
+    .logo h1{
+        font-size: 30px;
+    }
+    .logo img{
+        width: 85px;
+    }
+    .logo{
+        margin-top: 1rem;
+    }
+    .box::before{
+        top: 6.7rem;
+        left: 2.5%;
+    }
+}
